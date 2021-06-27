@@ -366,6 +366,10 @@ body{
     color: #fff;
 }
 
+.footer > .logo > a > span{
+    display: none;
+}
+
 @media screen and (min-width: 850px) {
     .nav-toggle{
         display: none;
