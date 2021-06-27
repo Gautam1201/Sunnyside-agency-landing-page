@@ -51,9 +51,6 @@ body{
     align-items: center;
     z-index: 1;
     padding: 50px;
-    transform: rotateX(0);
-    transition: all 0.5s;
-    transform-origin: top;
     max-width: 350px;
     min-width: 295px;
 }
@@ -110,7 +107,7 @@ body{
 }
 
 .hide{
-    transform: rotateX(-90deg);
+    display: none;
 }
 
 .invert-color{
@@ -379,7 +376,7 @@ body{
     .nav-menu{
         background-color: transparent;
         width: 100%;
-        margin: 15px 50px;
+        margin: 15px 75px;
         padding: 0;
     }
     .nav-menu > .nav-items{
@@ -390,7 +387,7 @@ body{
     }
 
     .hide{
-        transform: rotate(0);
+        display: block;
     }
 
     .nav-items > a{
