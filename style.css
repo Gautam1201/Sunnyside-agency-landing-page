@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    font-size: 18px;
+    display: grid;
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+}
+
+.header{
+    position: relative;
+}
+
+.header > picture > img{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.nav-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 86%;
+    margin: 100px 25px;
+    line-height: 2;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding: 50px;
+    transform: rotateX(0);
+    transition: all 0.5s;
+    transform-origin: top;
+    max-width: 350px;
+    min-width: 295px;
+}
+
+.nav-menu::before{
+    content: "";
+    position: absolute;
+    top:-35px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 25px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-top: 25px solid transparent;
+    border-left: 25px solid transparent;
+    z-index: 1;
+}
+
+.nav-toggle{
+    cursor: pointer;
+}
+
+.nav-menu > .nav-items{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.nav-items > a{
+    text-decoration: none;
+    color: hsl(210, 4%, 67%);
+    transition: all 0.3s;
+}
+
+.nav-items > a:hover{
+    color: hsl(212, 27%, 19%);
+}
+
+.nav-items > a:last-child{
+    text-transform: uppercase;
+    color: hsl(212, 27%, 19%);
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    border-radius: 50px;
+    padding: 8px 25px;
+    font-size: 1rem;
+    background-color: hsl(51, 100%, 49%);
+    transition: 0.3s background-color, 0.3s color 0.3s  
+}
+
+.nav-items > a:last-child:hover{
+    background-color: #fff;
+    color: hsl(51, 100%, 49%);
+}
+
+.hide{
+    transform: rotateX(-90deg);
+}
+
+.invert-color{
+    filter: invert(0.75);
+}
+
+.scroll-down{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3.5rem;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+.desc-wrapper{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.ad-img > picture > img{
+    width: 100%;
+    height: 100%;
+}
+
+.desc{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 25px;
+    row-gap: 3rem;
+}
+
+.desc > h1{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    color: hsl(212, 27%, 19%);
+}
+
+.desc > p {
+    color: hsl(232, 10%, 55%);
+}
+
+.desc .additional-info{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+}
+
+.desc .additional-info > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: hsl(212, 27%, 19%);
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.desc .additional-info > a::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    height: 45%;
+    transition: all 0.3s;
+}
+
+.additional-info > a:hover::before{
+    height: 100%;
+}
+
+.desc1 .additional-info > a::before{
+    background-color: hsl(51, 100%, 75%);
+}
+
+.desc2 .additional-info > a::before{
+    background-color: hsl(15, 99%, 80%);
+}
+
+.graphic-design, .photography{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.offers{
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-img > picture > img{
+    width: 100%;
+    height: 100%;
+}
+
+.offers .desc{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    row-gap: 2rem;
+}
+
+.offers .desc > h2{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+}
+
+.offers .desc > p{
+    font-size: 15px;
+}
+ 
+.graphic-design .desc > h2, .graphic-design .desc > p {
+    color: hsl(167, 40%, 24%);
+} 
+
+.photography .desc > h2, .photography .desc > p {
+    color: hsl(198, 62%, 26%);
+} 
+
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 35px 0;
+    row-gap: 50px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.testimony-collection{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.testimonials > h5{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:hsl(210, 4%, 67%);
+    letter-spacing: 5px;
+}
+
+.testimonial-design{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    row-gap: 25px;
+    line-height: 2;
+    color: hsl(213, 9%, 39%);
+    padding-bottom: 25px;
+}
+
+.testimonial-design > img{
+    border-radius: 50%;
+    width: 75px;
+}
+
+.testimony-by > .name{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    color: hsl(212, 27%, 19%);
+}
+
+.testimony-by > .position{
+    font-size: 1rem;
+    color: hsl(210, 4%, 67%);
+}
+
+.image-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+}
+
+.img-gallery-item > picture > img{
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    background-color: hsl(168, 34%, 61%);
+    color: hsl(167, 40%, 24%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    row-gap: 3rem;
+}
+
+.footer > .menu-items{
+    display: flex;
+    width: 100%;    
+    justify-content: center;
+    column-gap: 45px;
+}
+
+.menu-items > a{
+    text-decoration: none;
+    color: hsl(167, 40%, 24%);
+    transition: 0.3s;
+}
+
+.menu-items > a:hover{
+    color: #fff;
+}
+
+.footer > .social-icons{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.footer > .social-icons > img, .svg-icon{
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.footer > .social-icons > img:hover, .svg-icon:hover{
+    filter: brightness(0) invert(1);
+}
+
+.svg-icon:hover{
+    transform: scale(1.25);
+}
+
+.attribution {
+    margin-top: 15px;
+    font-size: 1rem;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(167, 40%, 24%);
+    transition: all 0.3s;
+    font-size: 18px;
+}
+
+.attribution a:hover{
+    color: #fff;
+}
+
+@media screen and (min-width: 850px) {
+    .nav-toggle{
+        display: none;
+    }
+    .nav-menu::before{
+        display: none;
+    }
+    .nav-menu{
+        background-color: transparent;
+        width: 100%;
+        margin: 15px 50px;
+        padding: 0;
+    }
+    .nav-menu > .nav-items{
+        flex-direction: row;
+        row-gap: 0;
+        column-gap: 25px;
+        align-items: center;
+    }
+
+    .hide{
+        transform: rotate(0);
+    }
+
+    .nav-items > a{
+        color: #fff;
+    }
+
+    .nav-items > a:last-child{
+        background-color: #fff;
+    }
+
+    .nav-items > a:last-child:hover{
+        background-color: rgba(0, 0, 0, 0.25);
+        color: #fff;
+    }
+    .desc-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+    .desc-wrapper > .desc{
+        text-align: left;
+        place-content: center;
+        max-width: 718px;
+    }
+    .wrapper1 > .ad-img{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .wrapper1 > .desc{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .offers{
+        flex-direction: row;
+    }
+    
+    .testimony-collection{
+        display: flex;
+        flex-direction: row;
+        column-gap: 35px;
+    }
+    .testimony-collection > .testimonial-design{
+        max-width: 355px;
+    }
+    .image-gallery{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media screen and (min-width: 1220px){
+    .desc-wrapper > .desc{
+        padding: 0 150px;
+    }
+    .desc{
+        padding: 50px 200px;
+    }
+}
