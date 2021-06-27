@@ -1,12 +1,14 @@
 # Frontend Mentor - Sunnyside agency landing page solution
 
-  
+  <br>
 
 This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). 
   
+<br>
 
 ## Table of contents
   
+
 
 -  [Overview](#overview)
 
@@ -28,16 +30,15 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 -  [Author](#author)
 
-
+<br>
   
 
 ## Overview
 
-  
+  <br>
 
 ### The challenge
 
-  
 
 Users should be able to:
 
@@ -50,20 +51,26 @@ Users should be able to:
   
 ### Links
 
+<br>
+  
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL](https://github.com/Gautam1201/Sunnyside-agency-landing-page.git)
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Sunnyside-landing-page](https://landing-page-sunnyside-agency.netlify.app/)
+  
+<br>
 
 ### Screenshot
+  <br>
 
 
 - ### DESKTOP VIEW
 <br>![Desktop-Screenshot](./screenshot-desktop.png)
   
-
+<br>
+  
 ## My process
-
+<br>
   
 
 ### Built with
@@ -79,15 +86,17 @@ Users should be able to:
 - Mobile-first workflow
 
   
+<br>
 
 ### What I learned
 
-  
+<br>  
 
 - While buliding this project, I learned about the <b>\<picture\></b> tag which can be used to specify different image resources for different viewport width or screen-size.
 
   
 HTML Snippet for <em>\<picture\></em> tag
+
 ```html
 
 <picture>
@@ -106,25 +115,34 @@ HTML Snippet for <em>\<picture\></em> tag
 </picture>
 
 ```
+
+<br>
+
 - I also learned how to use filter tag to edit color of <strong>SVG</strong> Icon.
+
+<br>
+
+CSS Snippet: 
 
 ```css
 .svg-icon:hover{
 	filter: brightness(0) invert(1);
 }
 ```
-  
+  <br>
 
 ### Continued development
-  
 
 This was my first landing page web site. I would like to continue practicing building landing page website and layouts using CSS Grid and Flexbox.
   
+<br>
 
 ### Useful resources
 
 -  [Picture tag \<W3-School\>](https://www.w3schools.com/tags/tag_picture.asp) - This helped me understand the concept of picture tag.
 -  [Editing Color of SVG Icon](https://medium.com/@union_io/swapping-fill-color-on-image-tag-svgs-using-css-filters-fa4818bf7ec6) - This is an amazing article which helped me understand how to use CSS Filter to edit the color of .svg img.
+
+<br>
 
 ## Author
  
